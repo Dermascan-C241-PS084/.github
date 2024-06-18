@@ -145,6 +145,20 @@ To begin deploying your server, you need a method to deploy the application. We'
 
 ### Machine Learning
 
+To get started with the skin condition prediction models and skincare recommendation system, please follow the instructions below:
+
+1. Clone The Repository https://github.com/Dermascan-C241-PS084/DermaScan-ML.git
+2. Install the necessary Python packages specified in the requirements.txt file with the following command:
+pip install -r requirements.txt 
+3. Explore the Jupyter notebooks and ReadMe  : 
+Explore the provided Jupyter notebooks and the README file to understand how to use the models effectively. The notebooks will guide you through different functionalities and how to utilize the model for skin lesion analysis.
+4. If you want test our model, you can go to “Test with New Image” section .
+To test the model with a new image:
+   - Navigate to the "Test with New Image" section in one of the Jupyter notebooks.
+   - Run the code cell to upload your image. This cell will allow you to choose an image file from your local machine.
+   - After uploading the image, run the remaining code cells in the "Test with a New Image" section. This will involve loading the model, processing the image, making a prediction, and displaying the results.
+
+
 ## Project Overview
 
 This project is focused on building and training a deep learning model to classify images of common skin disease. The project utilizes a dataset available on Kaggle, which consists of images of 8 types of common skin disease.
