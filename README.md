@@ -51,11 +51,7 @@ The mobile application is made starting with UI/UX designs and a little UX resea
 
 **Cloud Architecture**
 
-![Cloud Architecture](/profile/resource/cloud_architecture.png)
-
-**Database Structure**
-
-![Database Structure](/profile/resource/database_structure.png)
+![Cloud Architecture](Profil/resource/clouddiagrampng.png)
 
 **List Repostory for Cloud Computing**
 
@@ -128,81 +124,66 @@ finding and selecting effective skincare products tailored to individual needs.
 
 ### Mobile Development
 
-To get started with the mobile development, you can start by installing Android Studio. Then cloning this [repository](https://github.com/Capstone-Project-C23-PR485/Mobile-Development.git) to your local machine.
+To get started with the mobile development, you can start by installing Android Studio. Then cloning this [repository](https://github.com/Dermascan-C241-PS084/DermaScan-MD) to your local machine.
 
 ### Cloud Computing
 
 To get started to deploy the server, you need a way to deploy the applications. We defaulted to use Google Cloud Platform to deploy our server. We utilize Cloud Run, Cloud Build, Google Cloud Storage, Google Cloud SQL, Google Cloud Pub/Sub, and Firebase Authentication. The step to use is below:
 
-1. Create a GCP Projects
-2. Create Firebase Project and activate Firebase Authentication
-3. Create a Cloud SQL Instance
-4. Create a Cloud Storage Bucket
-5. Clone, build, and deploy the code in this repository to cloud run
-   - https://github.com/Capstone-Project-C23-PR485/skincheckai-api.git
-6. Set up Pub/Sub topic
-7. Clone, build, and deploy the machine-learning backend to Cloud Run
-   - Acne : https://github.com/Capstone-Project-C23-PR485/Cloud-Acne-Detection-Service.git
-   - Flek : https://github.com/Capstone-Project-C23-PR485/Cloud-Flek-Detection-Service.git
-   - Wrinkle : https://github.com/Capstone-Project-C23-PR485/Cloud-Wrinkle-Detection-Service.git
-8. Set up Pub/Sub subscription for each machine-learning backend
-9. Update all environtment variable in the Cloud Run service
+Cloud Computing
+
+To begin deploying your server, you need a method to deploy the application. We've opted to use Google Cloud Platform for our server deployments, utilizing Cloud Run, Cloud Build, Google Cloud Storage, and Firestore. Here are the steps to follow:
+
+1. Create a GCP Project
+2. Create a Firestore Instance
+3. Create a Cloud Storage Bucket
+4. Clone, Build, and Deploy the Code from the Repository to Cloud Run: https://github.com/Dermascan-C241-PS084/DermaScan-CC.git
+5. Clone, Build, and Deploy the Machine-Learning Backend to Cloud Run: https://github.com/Dermascan-C241-PS084/DermaScan-ML.git
+6. Update All Environment Variables in the Cloud Run Service
 
 ####
 
 ### Machine Learning
 
-To get started with the skin condition prediction models and skincare recommendation system,
-please follow the instructions below:
+## Project Overview
 
-1. Clone this repository:
-   - Acne:https://github.com/Capstone-Project-C23-PR485/Machine-Learning-Acne-TypeClassification.git
-   - Wrinkle:https://github.com/Capstone-Project-C23-PR485/-Machine-Learning-WrinkleType-Classification.git
-   - Flex:https://github.com/Capstone-Project-C23-PR485/Machine-Learning-Flex-TypeClassification.git
-   - Product Recommendation:https://github.com/Capstone-Project-C23-PR485/ProductRecommendation-.git
-2. Install the required dependencies:
-   - pip install python
-   - pip install keras
-   - pip install tensorflow
-3. Download the trained models and preprocessed datasets from the following links:
-   - Acne Type Prediction Model : https://drive.google.com/file/d/19y_LSalTBaCA8pk_Y0pa9RqldsEVj_Bz/view?usp=share_link
-   - Wrinkle Detection Model : https://drive.google.com/drive/folders/1Frk77G06bEWpdYkd7WNJ9tgl43ZkSeuS?us p=sharing
-   - Flake Detection Model : https://drive.google.com/file/d/18U8fijJX2el8s1GtWN_ngr58swDyYOzm/view?usp=sh aring
-4. Place the downloaded models in the appropriate directories.
-5. Explore the Jupyter notebooks provided in the repository to understand how to use the models and generate skincare recommendations.
-6. Follow the instructions within the notebooks to load the models, preprocess the data, and make predictions or generate skincare recommendations.
+This project is focused on building and training a deep learning model to classify images of common skin disease. The project utilizes a dataset available on Kaggle, which consists of images of 8 types of common skin disease.
 
-### Fine-tuning the Model
+## Dataset
 
-To fine-tune the model, the MobileNetV2 architecture pretrained on ImageNet is used as the
-base model. Fine-tuning starts from the 100th layer onwards. Layers before the 100th layer
-are frozen, while layers after the 100th layer are trainable.
+The dataset used in this project is the [Skin-Disease-Dataset](https://www.kaggle.com/datasets/subirbiswas19/skin-disease-dataset) available on Kaggle. It includes a good amount of images (around 1,100). In this dataset there are total 8 class ,They are:
 
-### Custom Layers
+1. Bacterial Infections - cellulitis
+2. Bacterial Infections - impetigo
+3. Fungal Infections - athlete -foot
+4. Fungal Infections - nail-fungus
+5. Fungal Infections - ringworm
+6. Parasitic Infections - cutaneous-larva-migrans
+7. Viral skin infections - chickenpox
+8. Viral skin infections - shingles.
 
-Custom layers are added on top of the base model to adapt it for the specific task. The added layers include:
 
-1. Global Average Pooling
-2. Batch Normalization
-3. Dropout
-4. Dense (with ReLU activation)
-5. Dense (with sigmoid activation, kernel regularizer l2)
+## Data Preparation
+The dataset is downloaded using kaggle API, extracted, and divided into training validation and test sets
 
-### Training and Evaluation
+## Model Architecture
+The model is a convolutional neural network (CNN) using transfer learning method with MobileNetV2.
 
-The model is compiled using the Adam optimizer with a learning rate of 0.0001 and categorical
-cross-entropy loss. The evaluation metric used is accuracy. The training process involves
-feeding the preprocessed images to the model and updating the model's parameters based
-on the computed loss.
+## Training the Model
+The model is trained using callbacks like EarlyStopping, and TensorBoard to optimize performance and prevent overfitting.
 
-### Pretrained Model
+## Evaluation and Visualization
+The model's performance is evaluated and visualized using Plotly. Graphs for loss and accuracy are plotted to understand the training and validation metrics over epochs.
 
-The base model, MobileNetV2, is pretrained on the ImageNet dataset. This pretrained model
-provides a good starting point for transfer learning, as it has already learned general features
-from a large-scale dataset.
+## Accuracy
+![Alt text](Test_Acc.png)
+- The Train accuracy of this model is **98.65%**
+- The Validation accuracy of this model is **96.17%**
+- The Test accuracy of this model is **97.00%**
 
-### Contributing
+## Training graphs
+![Alt text](accuracy.png)
+![Alt text](loss.png)
 
-We welcome contributions to enhance the skin condition prediction models and skincare
-recommendation system. If you have any ideas, bug fixes, or improvements, feel free to open
-an issue or submit a pull.
+## Tensorboard
+TensorBoard logs, useful for detailed performance analysis, available under the **logs** folder.
