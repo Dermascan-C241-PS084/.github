@@ -20,21 +20,21 @@ This was the early features that this applications have.
 
    <img src="../Profil/resource/scanpage.png" height="500">
    <img src="../Profil/resource/kameraforscan.png" height="500">
-    <img src="Profil/resource/usegaleryforscan.png" height="500">
-    <img src="Profil/resource/usinguCropforpicture.png" height="500">
+    <img src="../Profil/resource/usegaleryforscan.png" height="500">
+    <img src="../Profil/resource/usinguCropforpicture.png" height="500">
 
 4. Get your result skin desease
    
-    <img src="Profil/resource/simpan dan predcit gambar.png" height="500">
-   <img src="Profil/resource/resultpage.jpg" height="500">
+    <img src="../Profil/resource/simpan dan predcit gambar.png" height="500">
+   <img src="../Profil/resource/resultpage.jpg" height="500">
    
 5. Check your history Scan your skin
 
-    <img src="Profil/resource/historypage.png" height="500">
-     <img src="Profil/resource/detailhistory.png" height="500">
+    <img src="../Profil/resource/historypage.png" height="500">
+     <img src="../Profil/resource/detailhistory.png" height="500">
 6. Check your profile name or want to change password
 7. 
-   <img src="Profil/resource/profile.png" height="500">
+   <img src="../Profil/resource/profile.png" height="500">
 
 # Technical Details
 
@@ -46,7 +46,7 @@ The mobile application is made starting with UI/UX designs and a little UX resea
 #### 2. [APK DermaScan](https://drive.google.com/drive/folders/1eDNlhzFQzSnMLBk2goOmxmEJlo2qZrjE)
 
 **Flow Android**
-![Flow Android](Profil/resource/flowchart.png)
+![Flow Android](../Profil/resource/flowchart.png)
 
 ## DermaScan Cloud Computing Platform
 
@@ -54,7 +54,7 @@ The mobile application is made starting with UI/UX designs and a little UX resea
 
 **Cloud Architecture**
 
-![Cloud Architecture](Profil/resource/clouddiagrampng.png)
+![Cloud Architecture](../Profil/resource/clouddiagrampng.png)
 
 **List Repostory for Cloud Computing**
 
@@ -136,7 +136,7 @@ The model is trained using callbacks like EarlyStopping, and TensorBoard to opti
 The model's performance is evaluated and visualized using Plotly. Graphs for loss and accuracy are plotted to understand the training and validation metrics over epochs.
 
 ## Accuracy
-![Alt text](Profil/resource/Test_Acc.png)
+![Alt text](../Profil/resource/Test_Acc.png)
 - The Train accuracy of this model is **98.65%**
 - The Validation accuracy of this model is **96.17%**
 - The Test accuracy of this model is **97.00%**
