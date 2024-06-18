@@ -8,18 +8,18 @@ This was the early features that this applications have.
 
 1. Authentication
 
-   <img src="Profil/resource/login.png" height="500">
-     <img src="Profil/resource/register.png" height="500">
+   <img src="../Profil/resource/login.png" height="500">
+     <img src="../Profil/resource/register.png" height="500">
 
 2. Browse for check the skin article
 
-   <img src="Profil/resource/artikelpage.png" height="500">
-    <img src="Profil/resource/detailartikelpage.png" height="500">
+   <img src="../Profil/resource/artikelpage.png" height="500">
+    <img src="../Profil/resource/detailartikelpage.png" height="500">
     
 3. Get tour skin desease condition prediction
 
-   <img src="Profil/resource/scanpage.png" height="500">
-   <img src="Profil/resource/kameraforscan.png" height="500">
+   <img src="../Profil/resource/scanpage.png" height="500">
+   <img src="../Profil/resource/kameraforscan.png" height="500">
     <img src="Profil/resource/usegaleryforscan.png" height="500">
     <img src="Profil/resource/usinguCropforpicture.png" height="500">
 
