@@ -38,20 +38,16 @@ This was the early features that this applications have.
 
 # Technical Details
 
-## SkinCheck.AI Android Applications
+## DermaScan Android Applications
 
-The mobile application is made starting with UI/UX designs and a little UX research, then implementing the design results using native Kotlin Android by utilizing supporting libraries such as Retrofit to interact with APIs, ViewModel to maintain stable live data, and Firebase Google Authentication to process user authentication.
+The mobile application is made starting with UI/UX designs and a little UX research, then implementing the design results using native Kotlin Android by utilizing supporting libraries such as Retrofit to interact with APIs, ViewModel to maintain stable live data,and use datastore for save and get session user.
 
 **Flow Android**
-![Flow Android](/profile/resource/flow_aplikasi_android.png)
+![Flow Android](Profil/resource/flowchart.png)
 
-## SkinCheck.AI Cloud Computing Platform
+## DermaScan Cloud Computing Platform
 
-We have made a RestAPI server for our Skincheck.AI app using NestJS for our main server and FastAPI for machine learning model deployment. We deploy our backend services using Cloud Run, with the CI/CD pipeline using Cloud Build. We also utilize Google Cloud Storage for file storage, Google Cloud Pub/Sub for integrating our backend service, and Cloud SQL for our database server. We also successfully use cloud logging to debug our application.
-
-The backend of for cloud computing is implemented using Google Cloud Platform. We use Cloud Run, Cloud Build, Google Cloud Storage, Google Cloud SQL, Google Cloud Pub/Sub, and Firebase Authentication.
-
-**API Documentation :** https://documenter.getpostman.com/view/27702577/2s93sgXB56
+**API Documentation :** (https://dermascan-be-ivdxzttfra-et.a.run.app/predict)
 
 **Cloud Architecture**
 
