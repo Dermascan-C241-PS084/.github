@@ -61,11 +61,14 @@ The mobile application is made starting with UI/UX designs and a little UX resea
 
 #### 1. [DermaScan-api](https://github.com/Dermascan-C241-PS084/DermaScan-CC) (main backend API)
 
-Implemented using NestJS Framework and Prisma ORM.
+Implemented using Nodejs Framework and Hapi framework
 
-#### 2. Machine learning backend
+#### 2. Api-Design-Specification (Filled with API design using Postman)
+We implemented this the initial API design for our projects using Postman
 
-There is three machine learning backend used in this project. Each of them is for their own models.
+#### 3. Machine learning backend
+
+There is one machine learning backend used in this project. The backend is implemented using Postman
 
 - [cloud-skin-desease-api](https://github.com/Dermascan-C241-PS084/DermaScan-CC/blob/main/src/service/loadModel.js)
 
